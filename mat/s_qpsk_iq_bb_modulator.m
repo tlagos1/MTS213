@@ -52,7 +52,7 @@ d_script_id = 11102023; % should be : day month year (at least)
     % ** init constants **
 
     if (isunix) % working in UNIX env.
-        S_TX_DATA_PATH_NAME = '../dat/TPL1/';
+        S_TX_DATA_PATH_NAME = '../dat/';
     else % working in Windows env.
         S_TX_DATA_PATH_NAME = '..\dat\';
     end
