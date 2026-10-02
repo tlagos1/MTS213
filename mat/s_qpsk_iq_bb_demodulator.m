@@ -70,16 +70,16 @@ d_script_id = 11102023; % should be : day month year (at least)
     % parameters to manipulate
 
     modulationType = 2; % 1 for BPSK, 2 for QPSK
-    samp_error = 5; % normalised sampling error
+    samp_error = 0; % normalised sampling error
     phase_error = 0; % phase error
     d_symb_filter_rx = 1; % RX filter waveform, 0 : square (default), 1 raised cos.
-    d_alpha_rx = 0.9; % RX filter roll-off factor (raised cos.)
+    d_alpha_rx = 0.1; % RX filter roll-off factor (raised cos.)
 
     loopBack = 0;
     if loopBack
-        S_RX_DATA_FILE_NAME = 'rx_qpsk_rc_09.dat'; % Matlab Loop-Back
+        S_RX_DATA_FILE_NAME = 'rx_qpsk_rc_01.dat'; % Matlab Loop-Back
     else
-        S_RX_DATA_FILE_NAME = 'rx_qpsk_rc_09.dat'; % file to load
+        S_RX_DATA_FILE_NAME = 'rx_qpsk_rc_01.dat'; % file to load
     end
     % default parameters
 
@@ -236,8 +236,8 @@ d_script_id = 11102023; % should be : day month year (at least)
 
         end
 
-        fprintf('--> Sampling Offset %d : BER(P) = %g\n', ...
-            sampling_offset, ber_test);
+        %fprintf('--> Sampling Offset %d : BER(P) = %g\n', ...
+         %   sampling_offset, ber_test);
 
         if ber_test < best_ber_p
             best_ber_p = ber_test;
